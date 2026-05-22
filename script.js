@@ -54,7 +54,7 @@ function validerRDV() {
     document.getElementById("rdvForm").style.display = "none";
     document.getElementById("confirmation").style.display = "block";
 
-    return false;  // empeche l envoi reel du formulaire
+    return true;  // empeche l envoi reel du formulaire
 }
 
 /*  2. VALIDATION FORMULAIRE CONTACT */
@@ -94,7 +94,7 @@ function validerContact() {
     // Reinitialiser le formulaire
     document.getElementById("contactForm").reset();
 
-    return false;  // empeche l envoi reel
+    return true;  // empeche l envoi reel
 }
 
 
