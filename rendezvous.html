@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prendre RDV - Belle Etoile</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="logo">
+            <h1>✨ Belle Etoile</h1>
+            <p>Centre de Beaute & Bien-etre</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="apropos.html">A Propos</a></li>
+                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="rendezvous.html" class="active">Prendre RDV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rdv-section">
+            <div class="rdv-header-img">
+                <img src="../images/massage-relax.png" alt="Reservez votre moment de detente">
+            </div>
+            <h2>Prendre un Rendez-vous</h2>
+            <p>Reservez votre moment de detente en quelques clics. Nous vous confirmerons votre rendez-vous dans les plus brefs delais.</p>
+
+            <form id="rdvForm" action="#" method="post" onsubmit="return validerRDV();">
+                <fieldset>
+                    <legend>Informations Personnelles</legend>
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom et prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Telephone *</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Details du Rendez-vous</legend>
+                    <div class="form-group">
+                        <label for="service">Service souhaite *</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Choisissez un service --</option>
+                            <option value="nettoyage">Nettoyage de peau (250 DH)</option>
+                            <option value="hydratant">Soin hydratant (200 DH)</option>
+                            <option value="massage">Massage relaxant (300 DH)</option>
+                            <option value="manucure">Manucure classique (120 DH)</option>
+                            <option value="semipermanent">Manucure semi-permanent (250 DH)</option>
+                            <option value="pedicure">Pedicure spa (200 DH)</option>
+                            <option value="gommage">Gommage corps (280 DH)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date souhaitee *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="heure">Heure preferee *</label>
+                        <select id="heure" name="heure" required>
+                            <option value="">-- Choisissez une heure --</option>
+                            <option value="09:00">09h00</option>
+                            <option value="10:00">10h00</option>
+                            <option value="11:00">11h00</option>
+                            <option value="14:00">14h00</option>
+                            <option value="15:00">15h00</option>
+                            <option value="16:00">16h00</option>
+                            <option value="17:00">17h00</option>
+                            <option value="18:00">18h00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Notes supplementaires</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Allergies, preferences particulieres..."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Confirmer le Rendez-vous</button>
+                    <button type="reset" class="btn btn-secondary">Reinitialiser</button>
+                </div>
+            </form>
+
+            <div id="confirmation" class="confirmation" style="display: none;">
+                <h3>✅ Demande envoyee !</h3>
+                <p>Votre demande de rendez-vous a bien ete enregistree. Nous vous contacterons rapidement pour confirmation.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Belle Etoile - Centre de Beaute | Tous droits reserves</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
